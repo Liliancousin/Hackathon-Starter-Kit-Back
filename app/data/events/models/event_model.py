@@ -5,7 +5,7 @@ from shared import db
 class EventModel(db.Model):
     __tablename__ = "event"
  
-    id_event = Column(
+    id = Column(
 	Integer, 
 	primary_key=True,
     unique=True,
@@ -32,6 +32,6 @@ class EventModel(db.Model):
 	nullable=False
     )
  
-    utilisateurs = relationship('Utilisateur', back_populates='event')
+    UserModel = relationship('UserModel', back_populates='event')
     
     message = Column(String(100))
