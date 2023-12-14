@@ -7,7 +7,7 @@ class CouleurModel(db.Model):
 
     __tablename__ = "couleur"
  
-    id_couleur = Column(
+    id = Column(
 	Integer, 
 	primary_key=True, 
 	unique=True, 
