@@ -24,15 +24,15 @@ class CommandeModel(db.Model):
 	Integer, 
 	nullable=False
     )
-dateCommande = Column(
+    dateCommande = Column(
 	DateTime, 
 	nullable=False
     )
-panier_id = Column(
+    panier_id = Column(
 	Integer, 
-    ForeignKey('panier.id'), 
+	ForeignKey('panier.id'), 
 	nullable=False
     )
-PanierModel = relationship('PanierModel', back_populates='commande'),
+    PanierModel = relationship('PanierModel', back_populates='commande'),
 
 message = Column(String(100))
