@@ -5,7 +5,7 @@ from shared import db
 
 class NewsModel(db.Model):
     __tablename__ = "news"
-    id_news = Column(
+    id = Column(
 	Integer, 
 	primary_key=True, 
 	autoincrement=True
