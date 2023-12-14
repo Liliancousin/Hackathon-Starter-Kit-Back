@@ -33,6 +33,6 @@ panier_id = Column(
     ForeignKey('panier.id'), 
 	nullable=False
     )
-panier = relationship('panier', back_populates='commande'),
+PanierModel = relationship('PanierModel', back_populates='commande'),
 
 message = Column(String(100))
