@@ -32,5 +32,5 @@ class VetementModel(db.model):
     )
  
     TailleModel = relationship('TailleModel', back_populates='VetementModel')
-    Couleur = relationship('CouleurModel', back_populates='VetementModel')
+    CouleurModel = relationship('CouleurModel', back_populates='VetementModel')
     message = Column(String(100))
