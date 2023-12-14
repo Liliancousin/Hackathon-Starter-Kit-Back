@@ -6,7 +6,7 @@ from shared import db
 class CommandeModel(db.Model):
     __tablename__ = "commande"
  
-    id_commmande = Column(
+    id = Column(
 	Integer, 
 	primary_key=True, 
 	nullable=False
@@ -28,9 +28,9 @@ dateCommande = Column(
 	DateTime, 
 	nullable=False
     )
-idPanier = Column(
+panier_id = Column(
 	Integer, 
-    ForeignKey('id_panier'), 
+    ForeignKey('panier.id'), 
 	nullable=False
     )
 panier = relationship('panier', back_populates='commande'),
