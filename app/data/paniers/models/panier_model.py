@@ -20,9 +20,9 @@ class PanierModel(db.model):
 	Integer, ForeignKey('vetement.id'), 
 	nullable=False
     )
-    utilisateur_id = Column(
+    user_id = Column(
 	Integer, 
-	ForeignKey('utilisateur.id'), 
+	ForeignKey('user.id'), 
 	nullable=False
     )
  
