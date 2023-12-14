@@ -5,7 +5,7 @@ from shared import db
 
 class TailleModel(db.Model):
     __tablename__ = "taille"
-    id_taille = Column(
+    id = Column(
 	Integer, 
 	primary_key=True, 
 	unique=True, 
