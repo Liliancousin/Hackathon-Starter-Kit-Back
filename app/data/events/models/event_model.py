@@ -32,6 +32,6 @@ class EventModel(db.Model):
 	nullable=False
     )
  
-    UserModel = relationship('UserModel', back_populates='event')
+    UserModel = relationship('UserModel', back_populates='EventModel')
     
     message = Column(String(100))
