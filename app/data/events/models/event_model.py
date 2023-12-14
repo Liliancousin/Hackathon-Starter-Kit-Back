@@ -8,8 +8,8 @@ class EventModel(db.Model):
     id = Column(
 	Integer, 
 	primary_key=True,
-    unique=True,
-    nullable=False, 
+    	unique=True,
+    	nullable=False, 
     )
     date_event = Column(
 	DateTime, 
