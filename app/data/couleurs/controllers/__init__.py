@@ -1,0 +1,1 @@
+from .couleur_controller import couleur_blueprint
