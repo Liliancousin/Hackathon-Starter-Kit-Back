@@ -26,7 +26,7 @@ class PanierModel(db.model):
 	nullable=False
     )
  
-    VetementModel = relationship('VetementModel', back_populates='paniers')
-    UserModel = relationship('UtilisateurModel', back_populates='paniers')
+    VetementModel = relationship('VetementModel', back_populates='PanierModel')
+    UserModel = relationship('UtilisateurModel', back_populates='PanierModel')
 
     message = Column(String(100))
