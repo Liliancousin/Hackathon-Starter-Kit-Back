@@ -24,7 +24,7 @@ class CommandeModel(db.Model):
 	Integer, 
 	nullable=False
     )
-    dateCommande = Column(
+    date_commande = Column(
 	DateTime, 
 	nullable=False
     )
