@@ -6,10 +6,10 @@ from shared import db
 class VetementModel(db.model):
     __tablename__ = "vetement"
  
-    id_vetement = Column(
+    id = Column(
 	Integer, 
 	primary_key=True, 
-    nullable=False,
+    	nullable=False,
 	autoincrement=True
     )
     prix_vetement = Column(
@@ -20,17 +20,17 @@ class VetementModel(db.model):
 	String(45), 
 	nullable=False
     )
-    id_couleur = Column(
+    couleur_id = Column(
 	Integer, 
-	ForeignKey('idCouleur'), 
+	ForeignKey('couleur.id'), 
 	nullable=False
     )
-    id_taille = Column(
+    taille_id = Column(
 	Integer, 
-	ForeignKey('idTaille'), 
+	ForeignKey('taille.id'), 
 	nullable=False
     )
  
-    taille = relationship('Taille', back_populates='vetements')
-    couleur = relationship('Couleur', back_populates='vetements')
+    TailleModel = relationship('TailleModel', back_populates='VetementModel')
+    Couleur = relationship('CouleurModel', back_populates='VetementModel')
     message = Column(String(100))
