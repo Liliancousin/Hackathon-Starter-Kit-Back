@@ -30,7 +30,8 @@ class UserModel(db.Model):
         nullable=False
     )
     event_id = Column(
-	    Integer, ForeignKey('event.id'), 
+	    Integer, 
+	    ForeignKey('event.id'), 
 	    nullable=False
     )
  
