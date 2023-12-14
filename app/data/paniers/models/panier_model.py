@@ -6,7 +6,7 @@ from shared import db
 class PanierModel(db.model):
     __tablename__ = "panier"
  
-    id_panier = Column(
+    id = Column(
 	Integer, 
 	primary_key=True,
     nullable=False,
@@ -16,17 +16,17 @@ class PanierModel(db.model):
 	Integer, 
 	nullable=False
     )
-    id_vetement = Column(
-	Integer, ForeignKey('idVetement'), 
+    vetement_id = Column(
+	Integer, ForeignKey('vetement.id'), 
 	nullable=False
     )
-    id_utilisateur = Column(
+    utilisateur_id = Column(
 	Integer, 
-	ForeignKey('utilisateur.idUtilisateur'), 
+	ForeignKey('utilisateur.id'), 
 	nullable=False
     )
  
-    vetement = relationship('Vetement', back_populates='paniers')
-    utilisateur = relationship('Utilisateur', back_populates='paniers')
+    VetementModel = relationship('VetementModel', back_populates='paniers')
+    UserModel = relationship('UtilisateurModel', back_populates='paniers')
 
     message = Column(String(100))
